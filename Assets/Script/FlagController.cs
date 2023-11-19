@@ -8,6 +8,7 @@ public class FlagController : MonoBehaviour
     private Animator anim;
     private bool isTouched = false;
     public GameObject CameraTrigger;
+    public Vector2 lastPosition = new Vector2(20.5f, -2.5f);
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class FlagController : MonoBehaviour
             Debug.Log("Player touched Flag");
             isTouched = true;
 
-            other.transform.position = new Vector3(20.5f, -2.5f, 0.0f);
+            other.transform.position = lastPosition;
             //get other object's rigidbody
             Rigidbody2D otherRBody = other.gameObject.GetComponent<Rigidbody2D>();
             //freeze the rigidbody
