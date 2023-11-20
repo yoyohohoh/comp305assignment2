@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     private bool isJumped = false;
 
-    void Start()
+    public void Start()
     {
         rBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float horiz = Input.GetAxis("Horizontal");
+        GetComponent<PolygonCollider2D>().enabled = true;
+        Movement();
         isGrounded = GroundCheck();
 
         //Jump
@@ -39,7 +40,6 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
-        rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
 
         //Check if the sprite needs to be flipped
         if((isFacingRight && rBody.velocity.x < 0) || (!isFacingRight && rBody.velocity.x > 0))
@@ -52,6 +52,13 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("yVelocity", rBody.velocity.y);
         anim.SetBool("isGrounded", isGrounded);
         anim.SetBool("isJumped", isJumped);
+    }
+
+    public void Movement()
+    {
+        float horiz = Input.GetAxis("Horizontal");
+        rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
+
     }
 
     public void IsJumped()
@@ -79,10 +86,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Player touched " + other.gameObject.name);
-        transform.transform.parent = other.transform;
+        if(other.gameObject.CompareTag("Platform") || other.gameObject.layer == 6)
+        { 
+            transform.transform.parent = other.transform;
+        }
+
 
     }
+
 
 
 }

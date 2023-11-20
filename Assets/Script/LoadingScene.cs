@@ -18,7 +18,9 @@ public class LoadingScene : MonoBehaviour
     public void GameOver()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        player.transform.position = playerController.startPosition;
+        //player.transform.position = playerController.startPosition;
+        //play the playercontroller script fromt he beginning
+        playerController.Start();
     }
 
     public void OnTriggerEnter2D(Collider2D other)

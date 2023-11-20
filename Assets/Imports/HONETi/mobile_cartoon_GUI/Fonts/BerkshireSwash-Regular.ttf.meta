@@ -8,7 +8,8 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontNames: []
+  fontNames:
+  - Berkshire Swash
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

@@ -17,7 +17,7 @@ public class LifeSystemContoller : MonoBehaviour
     {
         count = GameObject.FindGameObjectsWithTag("Life").Length;
         Debug.Log("Life: " + count);
-        if (count == 0)
+        if (count <= 0)
         {
             Debug.Log("Game Over");
             SceneManager.LoadScene("GameOver");

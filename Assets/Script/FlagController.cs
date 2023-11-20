@@ -42,7 +42,7 @@ public class FlagController : MonoBehaviour
             other.gameObject.GetComponent<PlayerController>().IsJumped();
 
             //change scene after 2 seconds
-            Invoke("ChangeScene", 2.0f);
+            Invoke("ChangeScene", 5.0f);
         }
     }
 

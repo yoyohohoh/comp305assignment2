@@ -63,6 +63,8 @@ public class MovingPlatformController : MonoBehaviour
         }
     }
 
+
+
     public void AddWaypoint()
     {
         GameObject gObj = Instantiate(waypointObj, Vector2.zero, Quaternion.identity);

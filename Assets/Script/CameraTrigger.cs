@@ -14,21 +14,10 @@ public class CameraTrigger : MonoBehaviour
         vCameraController.TransitionTo(cameraToActivate);
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        Debug.Log("Player entered trigger");
-    //        vCameraController.TransitionTo(cameraToActivate);
-    //    }
-    //}
+    public void ZoomOut() 
+    { 
+        vCameraController.TransitionTo(cameraOut);
+    }
 
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        Debug.Log("Player exited trigger");
-    //        vCameraController.TransitionTo(cameraOut);
-    //    }
-    //}
+
 }

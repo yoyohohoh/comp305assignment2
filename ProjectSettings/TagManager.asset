@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Waypoint
   - Life
+  - Ground
   layers:
   - Default
   - TransparentFX
