@@ -214,7 +214,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  startPosition: {x: -13.5, y: 6.5}
+  startPosition: {x: -12, y: 3}
 --- !u!1 &2140974378594009212
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class FlagController : MonoBehaviour
 {
     private Animator anim;
     private bool isTouched = false;
-    public GameObject CameraTrigger;
+    private GameObject CameraTrigger;
     public Vector2 lastPosition = new Vector2(20.5f, -2.5f);
 
     void Start()
