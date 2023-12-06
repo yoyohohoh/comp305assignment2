@@ -17,9 +17,12 @@ public class LevelController : MonoBehaviour
 
     //public variable
     [SerializeField] public Text itemsUIText;
+    public int itemsCollectedQty;
 
     //private variable
-    private int totalItemsQty = 0, itemsCollectedQty = 0;
+    private int totalItemsQty = 0;
+    private DataKeeper dataKeeper;
+ 
 
 
     private void Awake()
@@ -31,34 +34,28 @@ public class LevelController : MonoBehaviour
         else
         {
             _instance = this;
+            itemsCollectedQty = DataKeeper.Instance.prePickedupItems;
+           
         }
     
     }
     void Start()
     {
-        totalItemsQty = GameObject.FindGameObjectsWithTag("Item").Length;
-        //Debug.Log("Total items: " + totalItemsQty);
+        totalItemsQty = GameObject.FindGameObjectsWithTag("Item").Length;        
         UpdateItemUI();
     }
 
+
     private void UpdateItemUI()
     {
-        itemsUIText.text = "X " + itemsCollectedQty;
+        itemsUIText.text = itemsCollectedQty.ToString();
     }
 
 
     public void PickedUpItem()
     {
         itemsCollectedQty++;
-        Debug.Log("Items collected: " + itemsCollectedQty);
         UpdateItemUI();
     }
 
-    //public void CheckLevelEnd()
-    //{
-    //    if(itemsCollectedQty == totalItemsQty)
-    //    {
-    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    //    }
-    //}
 }

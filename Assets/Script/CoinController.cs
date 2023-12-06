@@ -22,7 +22,6 @@ public class CoinController : MonoBehaviour
 
             //Increase player item pickup counter
             levelController.PickedUpItem();
-            //Debug.Log("Coin picked up");
             Destroy(this.gameObject);
 
         }
