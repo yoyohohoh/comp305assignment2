@@ -18,9 +18,8 @@ public class LifeSystemContoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count = GameObject.FindGameObjectsWithTag("Life").Length;
-        Debug.Log("Life: " + count);
-        if (count <= 0)
+        
+        if (dataKeeper.preLifeCount > 5)
         {
             Debug.Log("Game Over");
             dieScene = SceneManager.GetActiveScene().buildIndex;

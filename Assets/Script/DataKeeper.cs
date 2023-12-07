@@ -9,6 +9,7 @@ public class DataKeeper : MonoBehaviour
     private LevelController levelController;
     public int prePickedupItems;
     public int preEnemyBeat;
+    public int preLifeCount;
     public int currentScecneIndex;
     public int dieScene;
 
@@ -29,6 +30,7 @@ public class DataKeeper : MonoBehaviour
     {
         NumberOfItems(0);
         NumberOfEnemies(0);
+        NumberOfLives(0);
     }
 
     private void FixedUpdate()
@@ -36,12 +38,14 @@ public class DataKeeper : MonoBehaviour
         levelController = LevelController.Instance;
         levelController.itemsCollectedQty = DataKeeper.Instance.prePickedupItems;
         levelController.enemyBeat = DataKeeper.Instance.preEnemyBeat;
+        levelController.lifeCount = DataKeeper.Instance.preLifeCount;
     }
 
     private void Update()
     {
         NumberOfItems(levelController.itemsCollectedQty);
         NumberOfEnemies(levelController.enemyBeat);
+        NumberOfLives(levelController.lifeCount);
     }
 
     public void NumberOfItems(int totalItems)
@@ -53,10 +57,16 @@ public class DataKeeper : MonoBehaviour
         DataKeeper.Instance.preEnemyBeat = totalEnemies;
     }
 
+    public void NumberOfLives(int totalLives)
+    {
+        DataKeeper.Instance.preLifeCount = totalLives;
+    }
+
     public void DieScene(int scene)
     {
         dieScene = scene;
         Debug.Log("Die scene: " + dieScene);
+
     }
 
 }

@@ -18,8 +18,11 @@ public class LevelController : MonoBehaviour
     //public variable
     [SerializeField] public Text itemsUIText;
     [SerializeField] public Text enemyUIText;
+    [SerializeField] public Text lifeUIText;
     public int itemsCollectedQty;
     public int enemyBeat;
+    public int lifeCount;
+    public int dieScene;
  
     //private variable
     private int totalItemsQty = 0;
@@ -29,6 +32,7 @@ public class LevelController : MonoBehaviour
     {
         itemsCollectedQty = 0;
         enemyBeat = 0;
+        lifeCount = 0;
     }
 
     private void Awake()
@@ -42,6 +46,7 @@ public class LevelController : MonoBehaviour
             _instance = this;
             itemsCollectedQty = DataKeeper.Instance.prePickedupItems;
             enemyBeat = DataKeeper.Instance.preEnemyBeat;
+            lifeCount = DataKeeper.Instance.preLifeCount;
 
         }
     
@@ -51,8 +56,9 @@ public class LevelController : MonoBehaviour
         totalItemsQty = GameObject.FindGameObjectsWithTag("Item").Length;        
         UpdateItemUI();
         UpdateEnemyUI();
-    }
+        UpdateLifeUI();
 
+    }
 
     private void UpdateItemUI()
     {
@@ -62,6 +68,11 @@ public class LevelController : MonoBehaviour
     private void UpdateEnemyUI()
     {
         enemyUIText.text = enemyBeat.ToString();
+    }
+
+    private void UpdateLifeUI()
+    {
+        lifeUIText.text = lifeCount.ToString();
     }
 
 
@@ -75,6 +86,12 @@ public class LevelController : MonoBehaviour
     {
         enemyBeat++;
         UpdateEnemyUI();
+    }
+
+    public void CountLife()
+    {
+        lifeCount++;
+        UpdateLifeUI();
     }
 
 

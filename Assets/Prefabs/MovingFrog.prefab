@@ -152,7 +152,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0008368492, y: 0.4465847}
+  m_Offset: {x: -0.0063016415, y: 0.40472627}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -163,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9434347, y: 0.08990097}
+  m_Size: {x: 0.90212965, y: 0.047575474}
   m_EdgeRadius: 0
 --- !u!114 &8562435302982249880
 MonoBehaviour:
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 8979164448375813521}
   - component: {fileID: 8594105100040573799}
   - component: {fileID: 6075583304051802700}
-  - component: {fileID: 1609281399284274843}
+  - component: {fileID: 669010863058589079}
   m_Layer: 0
   m_Name: DieSPot
   m_TagString: Untagged
@@ -416,10 +416,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4331863, y: -0.10702729}
+  m_Offset: {x: -0.4495108, y: -0.06628883}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -430,7 +430,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.107082844, y: 0.7859454}
+  m_Size: {x: 0.13973188, y: 0.86742234}
   m_EdgeRadius: 0
 --- !u!61 &6075583304051802700
 BoxCollider2D:
@@ -461,10 +461,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4346149, y: -0.094795465}
+  m_Offset: {x: 0.44876266, y: -0.06424153}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -475,9 +475,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1307702, y: 0.81040907}
+  m_Size: {x: 0.15906572, y: 0.87151694}
   m_EdgeRadius: 0
---- !u!114 &1609281399284274843
+--- !u!114 &669010863058589079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8278596007272165218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a94295d0c9a1f44999d25072eb8d4cb, type: 3}
+  m_Script: {fileID: 11500000, guid: dc61eaf5f161dc845a11af3b7e7ab796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8393881985221033943
@@ -516,7 +516,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3986277284102933532}
   - {fileID: 3429133660727152680}

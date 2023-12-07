@@ -16,7 +16,6 @@ public class LoadingScene : MonoBehaviour
     {
         player = GameObject.Find("Player");
         playerController = player.GetComponent<PlayerController>();
-
     }
     public void GameOver()
     {
@@ -27,10 +26,19 @@ public class LoadingScene : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameOver();
             count++;
             Destroy(GameObject.Find("Life (" + count + ")"));
+            GameOver();
+        }
+    }
 
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            count++;
+            Destroy(GameObject.Find("Life (" + count + ")"));
+            GameOver();
         }
     }
 
