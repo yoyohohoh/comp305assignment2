@@ -9,7 +9,8 @@ public class ReportController : MonoBehaviour
     private int coinsCount;
     private int enemyBeat;
     private int reward;
-
+    private GameObject Star;
+    public float delay = 2f;
     private LevelController levelController;
 
     void Start()
@@ -18,6 +19,7 @@ public class ReportController : MonoBehaviour
         coinsCount = DataKeeper.Instance.prePickedupItems;
         enemyBeat = DataKeeper.Instance.preEnemyBeat;
         lifeCount = DataKeeper.Instance.preLifeCount;
+        Invoke("DestoryReport", delay);
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class ReportController : MonoBehaviour
         Debug.Log("Life: " + lifeCount);
         Debug.Log("Coins: " + coinsCount);
         Debug.Log("Enemy: " + enemyBeat);
-        Debug.Log("Reward: " + Result());
+        ActivateStar(Result());
     }
 
     private int Result()
@@ -50,6 +52,20 @@ public class ReportController : MonoBehaviour
         }
 
         return reward;
+    }
+
+    private void ActivateStar(int reward)
+    {
+
+        Star = GameObject.Find("Star" + reward);
+        Star.GetComponentInChildren<SpriteRenderer>().enabled = true;
+
+    }
+
+    private void DestoryReport()
+    {
+        Debug.Log("Destroy Report");
+        Destroy(this.gameObject);
     }
 
 
