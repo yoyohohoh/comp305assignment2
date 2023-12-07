@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SignController : MonoBehaviour
 {
-    public GameObject CameraTrigger;
+    private GameObject CameraTrigger;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
