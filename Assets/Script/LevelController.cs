@@ -17,13 +17,19 @@ public class LevelController : MonoBehaviour
 
     //public variable
     [SerializeField] public Text itemsUIText;
+    [SerializeField] public Text enemyUIText;
     public int itemsCollectedQty;
-
+    public int enemyBeat;
+ 
     //private variable
     private int totalItemsQty = 0;
     private DataKeeper dataKeeper;
- 
 
+    public void ResetNumber()
+    {
+        itemsCollectedQty = 0;
+        enemyBeat = 0;
+    }
 
     private void Awake()
     {
@@ -35,7 +41,8 @@ public class LevelController : MonoBehaviour
         {
             _instance = this;
             itemsCollectedQty = DataKeeper.Instance.prePickedupItems;
-           
+            enemyBeat = DataKeeper.Instance.preEnemyBeat;
+
         }
     
     }
@@ -43,6 +50,7 @@ public class LevelController : MonoBehaviour
     {
         totalItemsQty = GameObject.FindGameObjectsWithTag("Item").Length;        
         UpdateItemUI();
+        UpdateEnemyUI();
     }
 
 
@@ -51,11 +59,24 @@ public class LevelController : MonoBehaviour
         itemsUIText.text = itemsCollectedQty.ToString();
     }
 
+    private void UpdateEnemyUI()
+    {
+        enemyUIText.text = enemyBeat.ToString();
+    }
+
 
     public void PickedUpItem()
     {
         itemsCollectedQty++;
         UpdateItemUI();
     }
+
+    public void BeatedEnemy()
+    {
+        enemyBeat++;
+        UpdateEnemyUI();
+    }
+
+
 
 }

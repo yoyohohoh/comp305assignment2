@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    private DataKeeper dataKeeper;
+    private LevelController levelController;
+
+    void Start()
+    {
+        dataKeeper = DataKeeper.Instance;
+        levelController = LevelController.Instance;
+    }
     public void StartGame()
     {
         //SceneManager.LoadScene("Level1");
@@ -14,7 +22,9 @@ public class MainMenuController : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(1);
+        dataKeeper.ResetNumber();
+        levelController.ResetNumber();
+        SceneManager.LoadScene(dataKeeper.dieScene);
     }
 
     public void QuitGame()

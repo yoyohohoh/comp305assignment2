@@ -10,6 +10,7 @@ TagManager:
   - Life
   - Ground
   - Item
+  - Enemy
   layers:
   - Default
   - TransparentFX

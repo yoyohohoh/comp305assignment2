@@ -6,20 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScene : MonoBehaviour
 {
-    private int count = 0;
+    
+    private int count;
     GameObject player;
     PlayerController playerController;
+    
 
     void Start()
     {
         player = GameObject.Find("Player");
         playerController = player.GetComponent<PlayerController>();
+
     }
     public void GameOver()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //player.transform.position = playerController.startPosition;
-        //play the playercontroller script fromt he beginning
         playerController.Start();
     }
 
@@ -30,6 +30,7 @@ public class LoadingScene : MonoBehaviour
             GameOver();
             count++;
             Destroy(GameObject.Find("Life (" + count + ")"));
+
         }
     }
 
