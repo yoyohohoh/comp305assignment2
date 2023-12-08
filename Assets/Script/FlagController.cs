@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class FlagController : MonoBehaviour
 {
@@ -9,11 +11,12 @@ public class FlagController : MonoBehaviour
     private bool isTouched = false;
     private GameObject CameraTrigger;
     public Vector2 lastPosition = new Vector2(20.5f, -2.5f);
+    [SerializeField] private UnityEvent _action;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        
+
     }
 
     // Update is called once per frame
@@ -39,8 +42,8 @@ public class FlagController : MonoBehaviour
             CameraTrigger = GameObject.Find("CameraTrigger");
             CameraTrigger.GetComponentInChildren<CameraTrigger>().ZoomIn();
             //access to the PlayerController script and invoke method
-            other.gameObject.GetComponent<PlayerController>().IsJumped();
-
+            //other.gameObject.GetComponent<PlayerController>().IsJumped();
+            _action.Invoke();
             //change scene after 2 seconds
             Invoke("ChangeScene", 5.0f);
         }
