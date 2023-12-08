@@ -17,11 +17,18 @@ public class MainMenuController : MonoBehaviour
     {
         //SceneManager.LoadScene("Level1");
         //dont use above to avoid human error
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   
+        Invoke("NextScene", 1.0f);
+        GetComponent<AudioSource>().Play();
+        
+    }
+    public void NextScene()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void RestartGame()
     {
+        GetComponent<AudioSource>().Play();
         dataKeeper.ResetNumber();
         levelController.ResetNumber();
         SceneManager.LoadScene(dataKeeper.dieScene);

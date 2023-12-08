@@ -33,8 +33,12 @@ public class FlagController : MonoBehaviour
             Debug.Log("Player touched Flag");
             isTouched = true;
 
-            other.transform.position = lastPosition;           
-            GameObject.Find("Player2").transform.position = lastPosition + new Vector2(1.0f, 0.0f);
+            other.transform.position = lastPosition;
+            if (GameObject.Find("Player2") != null)
+            {
+                GameObject.Find("Player2").transform.position = lastPosition + new Vector2(1.0f, 0.0f);
+            }
+            
             //get other object's rigidbody
             Rigidbody2D otherRBody = other.gameObject.GetComponent<Rigidbody2D>();
             //freeze the rigidbody

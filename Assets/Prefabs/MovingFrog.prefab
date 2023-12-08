@@ -127,7 +127,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2522988010043600714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00450325, y: 0.40472627}
+  m_Offset: {x: 0.005114317, y: 0.4304645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -163,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0480003, y: 0.047575474}
+  m_Size: {x: 1.0474353, y: 0.09905195}
   m_EdgeRadius: 0
 --- !u!114 &8562435302982249880
 MonoBehaviour:
@@ -187,12 +187,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2522988010043600714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0471ba1bbe5da1147951bc1337ffd316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemFeedback: {fileID: 4289745815263069, guid: 1a7ad0124a188de43acf1ed0d1215f35, type: 3}
+  dieSpot: {fileID: 0}
 --- !u!1 &2809786001445316444
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +420,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4495108, y: -0.06628883}
+  m_Offset: {x: -0.40739036, y: -0.34319627}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -430,7 +431,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13973188, y: 0.86742234}
+  m_Size: {x: 0.06740618, y: 0.31360745}
   m_EdgeRadius: 0
 --- !u!61 &6075583304051802700
 BoxCollider2D:
@@ -461,10 +462,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.44876266, y: -0.06424153}
+  m_Offset: {x: 0.40974545, y: -0.40640736}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -475,7 +476,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.15906572, y: 0.87151694}
+  m_Size: {x: 0.060067654, y: 0.18718529}
   m_EdgeRadius: 0
 --- !u!114 &669010863058589079
 MonoBehaviour:
@@ -533,10 +534,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3986277284102933532}
     m_Modifications:
-    - target: {fileID: 1960979989464729132, guid: 236ba27a93fe3e9459003c58ec3f0597, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2522604452034059797, guid: 236ba27a93fe3e9459003c58ec3f0597, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -581,6 +578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog
       objectReference: {fileID: 0}
+    - target: {fileID: 5262516279964646479, guid: 236ba27a93fe3e9459003c58ec3f0597, type: 3}
+      propertyPath: dieSpot
+      value: 
+      objectReference: {fileID: 8278596007272165218}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

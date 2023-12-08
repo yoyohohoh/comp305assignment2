@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyKill : MonoBehaviour
 {
     [SerializeField] public GameObject itemFeedback;
+    [SerializeField] public GameObject dieSpot;
     private LevelController levelController;
     public void Start()
     {
@@ -20,6 +21,7 @@ public class EnemyKill : MonoBehaviour
 
             //Increase player item pickup counter
             levelController.BeatedEnemy();
+            dieSpot.SetActive(false);
             Destroy(this.gameObject);
 
         }
