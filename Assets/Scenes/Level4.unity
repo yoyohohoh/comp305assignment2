@@ -13238,11 +13238,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 840413308552313959, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0408535
+      value: -5.4185715
       objectReference: {fileID: 0}
     - target: {fileID: 840413308552313959, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4444532
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 840413308552313959, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13292,6 +13292,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1722543270}
+    - target: {fileID: 4975317954593022191, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
+      propertyPath: m_Lens.OrthographicSize
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4984399058554207906, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
       value: 7
@@ -13358,7 +13362,7 @@ PrefabInstance:
       objectReference: {fileID: 1722543270}
     - target: {fileID: 5050211086555981366, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 7
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 5982287680145722234, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13374,7 +13378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7303367418378529298, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0390272
+      value: -5.4185715
       objectReference: {fileID: 0}
     - target: {fileID: 7303367418378529298, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13390,7 +13394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9035025313582343776, guid: 93675018f1cce76439c4a53837d13f04, type: 3}
       propertyPath: orthographic size
-      value: 7
+      value: 4.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
