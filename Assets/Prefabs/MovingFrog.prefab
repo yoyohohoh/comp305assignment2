@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 6075583304051802700}
   - component: {fileID: 669010863058589079}
   m_Layer: 0
-  m_Name: DieSPot
+  m_Name: DieSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -489,6 +489,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc61eaf5f161dc845a11af3b7e7ab796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  player2: {fileID: 0}
   dieScene: 0
 --- !u!1 &8393881985221033943
 GameObject:

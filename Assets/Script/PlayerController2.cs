@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class PlayerController2 : MonoBehaviour
 {
+
     // public variables
     [SerializeField] private float speed = 10f;
     [SerializeField] public float jumpForce = 500.0f;
@@ -12,7 +14,7 @@ public class PlayerController2 : MonoBehaviour
     [SerializeField] private Transform groundCheckPos;
     [SerializeField] private LayerMask whatIsGround;
     public Vector2 startPosition = new Vector2(-12.0f, 3f);
-    
+
     // private variables
     private Rigidbody2D rBody;
     private Animator anim;
@@ -54,6 +56,8 @@ public class PlayerController2 : MonoBehaviour
         anim.SetBool("isGrounded", isGrounded);
         anim.SetBool("isJumped", isJumped);
     }
+
+
 
     public void Movement()
     {

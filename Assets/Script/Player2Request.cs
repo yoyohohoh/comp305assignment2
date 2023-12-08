@@ -12,7 +12,7 @@ public class Player2Request : MonoBehaviour
     {
 
         //if there is no player 2 in the game
-        if (GameObject.Find("Player2") == null)
+        if (GameObject.Find("Player2") == null && player2 != null)
         {
             Debug.Log("Request Player 2");
             player2.SetActive(true);

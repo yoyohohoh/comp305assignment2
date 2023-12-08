@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+
     // public variables
     [SerializeField] private float speed = 10f;
     [SerializeField] public float jumpForce = 500.0f;

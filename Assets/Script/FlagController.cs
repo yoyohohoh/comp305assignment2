@@ -28,12 +28,13 @@ public class FlagController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") && other.gameObject.name != "Player2")
         {
             Debug.Log("Player touched Flag");
             isTouched = true;
 
-            other.transform.position = lastPosition;
+            other.transform.position = lastPosition;           
+            GameObject.Find("Player2").transform.position = lastPosition + new Vector2(1.0f, 0.0f);
             //get other object's rigidbody
             Rigidbody2D otherRBody = other.gameObject.GetComponent<Rigidbody2D>();
             //freeze the rigidbody
