@@ -7,8 +7,10 @@ public class LifeController : MonoBehaviour
 {
     private LevelController levelController;
     private PlayerController playerController;
+    private PlayerController playerController2;
     private DataKeeper dataKeeper;
-    private GameObject player;
+    public GameObject player;
+    public GameObject player2;
     public int dieScene;
 
     public void Start()
@@ -16,8 +18,9 @@ public class LifeController : MonoBehaviour
         levelController = LevelController.Instance;
         dataKeeper = DataKeeper.Instance;
 
-        player = GameObject.Find("Player");
+        //player = GameObject.Find("Player");
         playerController = player.GetComponent<PlayerController>();
+        playerController2 = player2.GetComponent<PlayerController>();
     }
     void Update()
     {
@@ -40,6 +43,11 @@ public class LifeController : MonoBehaviour
             levelController.CountLife();
             playerController.Start();
         }
+        //if other gameobect name is Player2
+        if (other.gameObject.name == "Player2")
+        {
+            Destroy(other.gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -48,6 +56,10 @@ public class LifeController : MonoBehaviour
         {
             levelController.CountLife();
             playerController.Start();
+        }
+        if (other.gameObject.name == "Player2")
+        {
+            Destroy(other.gameObject);
         }
     }
 }

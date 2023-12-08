@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
     // public variables
     [SerializeField] private float speed = 10f;
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = GroundCheck();
 
         //Jump
-        if ( isGrounded && Input.GetAxis("Jump") > 0)
+        if ( isGrounded && Input.GetAxis("Player2Jump") > 0)
         {
             rBody.AddForce(new Vector2(0.0f, jumpForce));
             isGrounded = false;
@@ -57,9 +57,8 @@ public class PlayerController : MonoBehaviour
 
     public void Movement()
     {
-        float horiz = Input.GetAxis("Horizontal");
+        float horiz = Input.GetAxis("Player2Horizontal");
         rBody.velocity = new Vector2(horiz * speed, rBody.velocity.y);
-
 
     }
 
