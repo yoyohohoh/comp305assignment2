@@ -2,28 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BoxController : MonoBehaviour
 {
-    GameObject player;
-    int count = 0;
+    public GameObject platform;
+    public GameObject elevator;
+    public GameObject player;
+    //int count = 0;
+    [SerializeField] private UnityEvent _action;
     void Start()
     {
-        player = GameObject.Find("Player");
+
 
     }
-    private void Update()
-    {
-        Debug.Log("Box: " + count);
-    }
+
 
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && this.gameObject.tag == "Entrance")
         {
-            Destroy(GameObject.Find("Box (" + count + ")"));
-            count++;
+                    
+            _action.Invoke();
+            
+            
+            elevator.SetActive(true);
+            Destroy(this.gameObject);
+
         }
     }
 }

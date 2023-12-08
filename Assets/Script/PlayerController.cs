@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     // public variables
     [SerializeField] private float speed = 10f;
-    [SerializeField] private float jumpForce = 500.0f;
+    [SerializeField] public float jumpForce = 500.0f;
     [SerializeField] private float groundCheckRadius = 0.15f;
     [SerializeField] private Transform groundCheckPos;
     [SerializeField] private LayerMask whatIsGround;
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log("Player Position: " + transform.position);
         GetComponent<PolygonCollider2D>().enabled = true;
         Movement();
         isGrounded = GroundCheck();

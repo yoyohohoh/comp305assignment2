@@ -7,7 +7,7 @@ public class GameWin : MonoBehaviour
     private void Start()
     {
 
-        GameObject.Find("Win").GetComponent<Canvas>().enabled = false;
+        GameObject.Find("AudioManager").GetComponent<AudioSource>().enabled = true;
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -15,8 +15,8 @@ public class GameWin : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //UI Text "Win" appear
-            GameObject.Find("Win").GetComponent<Canvas>().enabled = true;
-
+            //GameObject.Find("Win").GetComponent<Canvas>().enabled = true;
+            GameObject.Find("AudioManager").GetComponent<AudioSource>().enabled = false;
         }
     }
 }
