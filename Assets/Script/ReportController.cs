@@ -19,7 +19,7 @@ public class ReportController : MonoBehaviour
         coinsCount = DataKeeper.Instance.prePickedupItems;
         enemyBeat = DataKeeper.Instance.preEnemyBeat;
         lifeCount = DataKeeper.Instance.preLifeCount;
-        Invoke("DestoryReport", delay);
+        //Invoke("DestoryReport", delay);
     }
 
     // Update is called once per frame
