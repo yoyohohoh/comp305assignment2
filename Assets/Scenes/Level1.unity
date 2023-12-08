@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &77289940 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9163979788413983053, guid: a8d7b527966971c40aa9259fa9b62ba8, type: 3}
+  m_PrefabInstance: {fileID: 3063342677861610470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &163572266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1994,6 +2005,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 300091737360879790, guid: a8d7b527966971c40aa9259fa9b62ba8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 300091737360879790, guid: a8d7b527966971c40aa9259fa9b62ba8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 300091737360879790, guid: a8d7b527966971c40aa9259fa9b62ba8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 300091737360879790, guid: a8d7b527966971c40aa9259fa9b62ba8, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
@@ -2005,6 +2028,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4804072197242621680, guid: a8d7b527966971c40aa9259fa9b62ba8, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 77289940}
     - target: {fileID: 4804072197242621680, guid: a8d7b527966971c40aa9259fa9b62ba8, type: 3}
       propertyPath: player2
       value: 
