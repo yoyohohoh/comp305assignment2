@@ -72,7 +72,7 @@ public class LevelController : MonoBehaviour
 
     private void UpdateLifeUI()
     {
-        lifeUIText.text = lifeCount.ToString();
+        lifeUIText.text = (5 - lifeCount).ToString();
     }
 
 
